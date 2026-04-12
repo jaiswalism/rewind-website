@@ -1,47 +1,51 @@
+# rewind-website
 
-# Rewind App Website
+Website for the **Rewind** iOS app — a mental wellness companion featuring journaling, guided care routines, a supportive community, and a virtual evolving companion.
 
-This is the official marketing website for the Rewind iOS app—a mental wellness companion that combines journaling, guided care, a supportive community, and a virtual pet.
+Built with Next.js and deployed on Vercel.
 
-## ✨ Features
+## What this is
 
-- **Hero**: Bold intro, animated logo, and CTAs
-- **Features**: Journals, Care Corner, Community, HomePets, Pet Talking
-- **Screenshots Gallery**: Interactive, animated app screenshots
-- **Testimonials**: Real user stories
-- **FAQ**: Collapsible, animated answers
-- **Download**: App Store badge and QR code
-- **Contact**: Animated support form
+This is the public-facing landing page for Rewind, designed to:
+- Showcase the app's features and screenshots
+- Drive App Store downloads
+- Serve legal pages (Privacy Policy, Terms of Service, EULA, Support)
 
-## 🛠️ Stack
+> This project is tightly coupled to the Rewind iOS app and is not intended as a generic template.
 
-- Next.js (App Router, TypeScript)
-- Tailwind CSS (customized, responsive)
-- Framer Motion (animations)
-- React Icons
+## Stack
 
-## 🚀 Getting Started
+- **Next.js 16** (App Router, TypeScript)
+- **Tailwind CSS** — custom design system matching the iOS app's visual identity
+- **Framer Motion** — scroll-driven animations and parallax gallery
 
-1. Install dependencies:
-	```bash
-	npm install
-	```
-2. Start the dev server:
-	```bash
-	npm run dev
-	```
-3. Open [http://localhost:3000](http://localhost:3000) in your browser.
+## Structure
 
-## 🖼️ Customization
+```
+src/
+├── app/
+│   ├── page.tsx              # Main landing page
+│   ├── layout.tsx            # Root layout + metadata + favicon
+│   ├── not-found.tsx         # 404 page
+│   ├── privacy/              # Privacy Policy
+│   ├── terms/                # Terms of Service
+│   ├── eula/                 # EULA
+│   └── support/              # Support page
+└── components/
+    ├── HeroSection.tsx         # Hero + nav
+    ├── GallerySection.tsx      # Scroll-driven screenshot gallery
+    ├── FeaturesSection.tsx     # Feature highlights with images
+    ├── TestimonialsSection.tsx # User reviews
+    ├── FAQSection.tsx          # Animated accordion FAQ
+    └── FooterSection.tsx       # Download CTA + links
+```
 
-- Replace images in `public/screenshots/` for the gallery.
-- Update `/public/appstore-badge.svg` and `/public/rewind-qr.png` for real download links.
-- Edit content in `src/components/` for sections.
+## Assets
 
-## 📦 Deployment
-
-Deploy on [Vercel](https://vercel.com/) or any platform supporting Next.js.
+App screenshots live in `public/screenshots/` (1.jpg → 5.jpg).
+Feature images: `journal-feature.jpg`, `care-corner.jpg`, `live-voice.jpg`.
+Hero mockup: `hero-mockup.jpg` (4:3 aspect ratio).
 
 ---
 
-© 2026 Rewind. For support, email support@rewindapp.com
+© 2026 Rewind · [rewind@shyamjaiswal.in](mailto:rewind@shyamjaiswal.in)
