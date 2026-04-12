@@ -4,47 +4,49 @@ import { motion } from "framer-motion";
 
 export default function HeroSection() {
   return (
-    <section className="relative w-full pt-8 pb-20 lg:pt-12 lg:pb-32 overflow-hidden bg-[var(--brand-light)] bg-grid-pattern">
+    <section className="relative w-full pt-8 pb-20 lg:pt-12 lg:pb-32 overflow-hidden bg-[var(--background)]">
+      {/* Absolute massive pastel blobs */}
+      <div className="absolute top-[-10%] right-[-5%] w-[800px] h-[800px] bg-[var(--brand-mint)] opacity-70 organic-blob z-0 mix-blend-multiply"></div>
+      <div className="absolute top-[20%] left-[-10%] w-[600px] h-[600px] bg-[var(--brand-peach)] opacity-70 organic-blob-2 z-0 mix-blend-multiply"></div>
+      <div className="absolute bottom-[-20%] right-[20%] w-[700px] h-[700px] bg-[var(--brand-yellow)] opacity-50 organic-blob z-0 mix-blend-multiply"></div>
+
       {/* Navigation Header */}
       <div className="max-w-7xl mx-auto px-6 relative z-20 flex justify-between items-center mb-16 lg:mb-24">
         <div className="flex items-center gap-3">
-          <div className="p-1 bg-white rounded-[14px] shadow-sm inner-border">
-            <img src="/logo.png" alt="Rewind Logo" className="w-10 h-10 object-contain rounded-[10px]" />
+          <div className="p-1.5 bg-white/50 backdrop-blur-md rounded-2xl shadow-sm">
+            <img src="/logo-dark.png" alt="Rewind Logo" className="w-10 h-10 object-contain rounded-[10px]" />
           </div>
-          <span className="font-extrabold text-gray-900 text-xl tracking-tight">Rewind</span>
+          <span className="font-extrabold text-[var(--foreground)] text-2xl tracking-tight">Rewind</span>
         </div>
       </div>
-
-      {/* Organic blob background element */}
-      <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-[#3B38FF]/5 organic-blob -translate-y-1/4 translate-x-1/4 z-0"></div>
       
       <div className="max-w-7xl mx-auto px-6 relative z-10 flex flex-col lg:flex-row items-center gap-16">
         
         {/* Left: Text Content */}
-        <div className="flex-1 text-center lg:text-left">
+        <div className="flex-1 text-center lg:text-left pt-10">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="inline-block px-4 py-1.5 rounded-full bg-white text-[#3B38FF] font-bold text-sm shadow-sm mb-6 inner-border"
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+            className="inline-block px-5 py-2 rounded-full bg-[var(--brand-teal)] text-[var(--foreground)] font-bold text-sm shadow-sm mb-6"
           >
             v2.0 Now Available
           </motion.div>
           
           <motion.h1 
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.1 }}
-            className="text-5xl lg:text-7xl font-extrabold tracking-[-0.03em] text-[#111827] leading-[1.05] mb-6"
+            transition={{ duration: 0.8, delay: 0.1, ease: "easeOut" }}
+            className="text-6xl lg:text-8xl font-extrabold tracking-[-0.04em] text-[var(--foreground)] leading-[1.0] mb-8"
           >
-            Reflect, grow, <br className="hidden lg:block"/> and <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#3B38FF] to-[#8180FF]">remember.</span>
+            Reflect, grow, <br className="hidden lg:block"/> and remember.
           </motion.h1>
           
           <motion.p 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-xl text-gray-600 mb-10 max-w-2xl mx-auto lg:mx-0 font-medium"
+            transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
+            className="text-2xl text-[var(--foreground)] opacity-80 mb-12 max-w-2xl mx-auto lg:mx-0 font-medium leading-relaxed"
           >
             A secure digital journal and guided care routine, featuring your very own virtual evolving companion.
           </motion.p>
@@ -63,19 +65,20 @@ export default function HeroSection() {
 
         {/* Right: massive placeholder for hero mockup */}
         <motion.div 
-          initial={{ opacity: 0, x: 40 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.8, delay: 0.3, type: "spring", stiffness: 100 }}
-          className="flex-1 w-full max-w-lg lg:max-w-none relative"
+          initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1, delay: 0.3, ease: "easeOut" }}
+          className="flex-1 w-full max-w-lg lg:max-w-none relative mt-12 lg:mt-0"
         >
           {/* This is the placeholder where the user will drop their hero-mockup.png */}
-          <div className="w-full aspect-[4/5] bg-white rounded-[3rem] shadow-[0_20px_50px_-12px_rgba(0,0,0,0.1)] border-[8px] border-white overflow-hidden relative flex flex-col items-center justify-center text-center p-8 active:scale-[0.98] transition-transform duration-300">
+          <div className="w-full aspect-[4/5] bg-white rounded-[4rem] shadow-[0_40px_80px_-20px_rgba(34,60,51,0.15)] border-[12px] border-white/50 backdrop-blur-xl overflow-hidden relative flex flex-col items-center justify-center text-center p-8 active:scale-[0.98] transition-transform duration-500 z-10">
             <div className="iphone-notch"></div>
-            <div className="w-16 h-16 rounded-2xl bg-gray-50 flex items-center justify-center mb-4 inner-border">
-              <svg className="w-8 h-8 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+            
+            <div className="w-20 h-20 rounded-full bg-[var(--brand-mint)] flex items-center justify-center mb-6">
+              <svg className="w-10 h-10 text-[var(--foreground)]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 4v16m8-8H4"></path></svg>
             </div>
-            <p className="font-bold text-gray-500 text-lg">Drop your master mockup here</p>
-            <p className="text-gray-400 text-sm mt-3 font-mono bg-gray-50 px-3 py-1 rounded inner-border">/public/hero-mockup.png</p>
+            <p className="font-bold text-[var(--foreground)] text-xl">Drop your master mockup here</p>
+            <p className="text-[var(--foreground)] opacity-50 text-sm mt-3 font-mono bg-[var(--surface-gray)] px-4 py-2 rounded-xl">/public/hero-mockup.png</p>
           </div>
         </motion.div>
         

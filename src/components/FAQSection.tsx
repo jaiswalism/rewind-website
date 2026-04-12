@@ -22,11 +22,12 @@ export default function FAQSection() {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
   return (
-    <section className="py-24 bg-[var(--surface-gray)]">
+    <section className="py-32 bg-[var(--background)]">
       <div className="max-w-3xl mx-auto px-6">
         
-        <div className="text-center mb-16">
-          <h2 className="text-4xl font-extrabold text-[#111827]">Frequently Asked Questions</h2>
+        <div className="text-center mb-16 relative">
+          <h2 className="text-4xl md:text-5xl font-extrabold text-[var(--foreground)] tracking-tight">Frequently Asked Questions</h2>
+          <div className="absolute top-[-50%] left-[20%] w-32 h-32 bg-[var(--brand-mint)] opacity-60 organic-blob -z-10"></div>
         </div>
 
         <div className="flex flex-col gap-4">
@@ -35,14 +36,14 @@ export default function FAQSection() {
             return (
               <div 
                 key={idx} 
-                className={`bg-white rounded-2xl overflow-hidden transition-all duration-300 ${isOpen ? 'soft-shadow border border-gray-100' : 'border border-gray-200 hover:border-gray-300'}`}
+                className={`bg-white/40 backdrop-blur-md rounded-3xl overflow-hidden transition-all duration-300 ${isOpen ? 'shadow-[0_10px_30px_-10px_rgba(34,60,51,0.08)] border border-white/80' : 'border border-[var(--border-color)] hover:border-white/80'}`}
               >
                 <button 
                   onClick={() => setOpenIndex(isOpen ? null : idx)}
                   className="w-full text-left px-8 py-6 flex justify-between items-center focus:outline-none"
                 >
-                  <span className="font-bold text-lg text-gray-900">{faq.question}</span>
-                  <div className={`w-8 h-8 rounded-full flex items-center justify-center transition-transform duration-300 ${isOpen ? 'bg-[#3B38FF] text-white rotate-180' : 'bg-gray-100 text-gray-600'}`}>
+                  <span className="font-bold text-lg text-[var(--foreground)] tracking-tight">{faq.question}</span>
+                  <div className={`w-10 h-10 rounded-full flex items-center justify-center transition-transform duration-300 ease-out ${isOpen ? 'bg-[var(--brand-mint)] text-[var(--foreground)] rotate-180' : 'bg-black/5 text-[var(--foreground)]'}`}>
                     <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path></svg>
                   </div>
                 </button>
@@ -52,9 +53,10 @@ export default function FAQSection() {
                       initial={{ height: 0, opacity: 0 }}
                       animate={{ height: "auto", opacity: 1 }}
                       exit={{ height: 0, opacity: 0 }}
+                      transition={{ duration: 0.3, ease: "easeInOut" }}
                       className="overflow-hidden"
                     >
-                      <div className="px-8 pb-6 text-gray-600 font-medium leading-relaxed">
+                      <div className="px-8 pb-8 text-[var(--foreground)] opacity-70 font-medium leading-relaxed">
                         {faq.answer}
                       </div>
                     </motion.div>

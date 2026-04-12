@@ -1,38 +1,38 @@
 export default function FooterSection() {
   return (
-    <footer className="bg-white pt-24 pb-12">
+    <footer className="bg-[var(--background)] pt-24 pb-12">
       
       {/* Massive Download CTA */}
-      <div className="max-w-5xl mx-auto px-6 mb-24">
-        <div className="bg-[#3B38FF] rounded-[3rem] p-12 md:p-20 text-center relative overflow-hidden soft-shadow">
-          <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-white/10 organic-blob -translate-y-1/2 translate-x-1/2"></div>
+      <div className="max-w-5xl mx-auto px-6 mb-32 relative">
+        <div className="bg-[var(--brand-mint)] rounded-[4rem] p-12 md:p-24 text-center relative overflow-hidden">
+          <div className="absolute top-[-20%] left-[-10%] w-[500px] h-[500px] bg-[var(--brand-peach)] opacity-60 organic-blob mix-blend-multiply"></div>
+          <div className="absolute bottom-[-20%] right-[-10%] w-[400px] h-[400px] bg-[var(--brand-yellow)] opacity-60 organic-blob-2 mix-blend-multiply"></div>
           
           <div className="relative z-10">
-            <h2 className="text-4xl md:text-5xl font-extrabold text-white mb-6">Ready to reflect?</h2>
-            <p className="text-xl text-blue-100 font-medium mb-10 max-w-xl mx-auto">
+            <h2 className="text-5xl md:text-6xl font-extrabold text-[var(--foreground)] mb-6 tracking-tight">Ready to reflect?</h2>
+            <p className="text-2xl text-[var(--foreground)] opacity-70 font-medium mb-10 max-w-xl mx-auto">
               Join thousands of users improving their mental wellness completely free.
             </p>
-            <a href="#download" className="inline-block bg-white text-[#3B38FF] font-bold text-lg px-10 py-4 rounded-full shadow-xl hover:scale-105 transition-transform">
+            <a href="#download" className="btn-primary inline-block px-10 py-5 text-lg font-bold">
               Download Rewind Today
             </a>
           </div>
         </div>
       </div>
 
-      {/* Standard Footer Links */}
-      <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-6 pt-8 border-t border-gray-100">
+      <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-6 pt-12 border-t border-[var(--border-color)]">
         <div className="flex items-center gap-3">
-          <img src="/logo.png" alt="Rewind Logo" className="w-10 h-10 object-contain rounded-[10px]" />
-          <span className="font-bold text-gray-900 text-lg">Rewind</span>
+          <img src="/logo-dark.png" alt="Rewind Logo" className="w-10 h-10 object-contain rounded-[10px]" />
+          <span className="font-extrabold text-[var(--foreground)] text-lg tracking-tight">Rewind</span>
         </div>
         
-        <div className="flex gap-8 text-gray-500 font-medium">
-          <a href="/privacy" className="hover:text-gray-900 transition-colors">Privacy</a>
-          <a href="/terms" className="hover:text-gray-900 transition-colors">Terms</a>
-          <a href="/support" className="hover:text-gray-900 transition-colors">Support</a>
+        <div className="flex gap-8 text-[var(--foreground)] opacity-60 font-medium">
+          <a href="/privacy" className="hover:opacity-100 transition-opacity">Privacy</a>
+          <a href="/terms" className="hover:opacity-100 transition-opacity">Terms</a>
+          <a href="/support" className="hover:opacity-100 transition-opacity">Support</a>
         </div>
         
-        <div className="text-gray-400 text-sm">
+        <div className="text-[var(--foreground)] opacity-40 text-sm font-medium">
           &copy; 2026 Rewind iOS App.
         </div>
       </div>
