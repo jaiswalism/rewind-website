@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function FooterSection() {
   return (
     <footer className="bg-[var(--background)] pt-24 pb-12">
@@ -27,9 +29,9 @@ export default function FooterSection() {
         </div>
 
         <div className="flex gap-8 text-[var(--foreground)] opacity-60 font-medium">
-          <a href="/privacy" className="hover:opacity-100 transition-opacity">Privacy</a>
-          <a href="/terms" className="hover:opacity-100 transition-opacity">Terms</a>
-          <a href="/support" className="hover:opacity-100 transition-opacity">Support</a>
+          <Link href="/privacy" className="hover:opacity-100 transition-opacity">Privacy</Link>
+          <Link href="/terms" className="hover:opacity-100 transition-opacity">Terms</Link>
+          <Link href="/support" className="hover:opacity-100 transition-opacity">Support</Link>
         </div>
 
         <div className="text-[var(--foreground)] opacity-40 text-sm font-medium">

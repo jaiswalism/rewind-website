@@ -1,3 +1,4 @@
+import Navigation from "../components/Navigation";
 import HeroSection from "../components/HeroSection";
 import GallerySection from "../components/GallerySection";
 import FeaturesSection from "../components/FeaturesSection";
@@ -8,6 +9,7 @@ import FooterSection from "../components/FooterSection";
 export default function Home() {
   return (
     <main className="w-full">
+      <Navigation />
       <HeroSection />
       <GallerySection />
       <FeaturesSection />

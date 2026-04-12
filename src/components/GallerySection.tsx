@@ -74,9 +74,9 @@ export default function GallerySection() {
   );
 
   return (
-    <>
+    <div id="gallery">
       {/* ── MOBILE: simple horizontal swipe strip ── */}
-      <section id="gallery" className="md:hidden py-16 bg-[var(--surface-gray)] overflow-hidden relative">
+      <section className="md:hidden py-16 bg-[var(--surface-gray)] overflow-hidden relative">
         <div className="absolute top-1/2 left-[20%] w-[600px] h-[600px] bg-white opacity-50 organic-blob -translate-y-1/2 mix-blend-overlay pointer-events-none"></div>
         <SectionHeader />
         <div className="flex overflow-x-auto gap-4 px-6 pb-8 snap-x snap-mandatory select-none" style={{ WebkitOverflowScrolling: "touch" } as React.CSSProperties}>
@@ -92,7 +92,7 @@ export default function GallerySection() {
       </section>
 
       {/* ── DESKTOP: sticky scroll-driven parallax ── */}
-      <div id="gallery-desktop" ref={outerRef} className="hidden md:block" style={{ position: 'relative', height: `${placeholders.length * 30 + 10}vh` }}>
+      <div ref={outerRef} className="hidden md:block" style={{ position: 'relative', height: `${placeholders.length * 30 + 10}vh` }}>
         <div className="sticky top-0 h-screen bg-[var(--surface-gray)] flex flex-col justify-center relative z-10">
           <div className="absolute top-1/2 left-[20%] w-[1000px] h-[1000px] bg-white opacity-50 organic-blob -translate-y-1/2 mix-blend-overlay pointer-events-none"></div>
           <SectionHeader />
@@ -120,6 +120,6 @@ export default function GallerySection() {
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 }

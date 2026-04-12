@@ -4,32 +4,11 @@ import { motion } from "framer-motion";
 
 export default function HeroSection() {
   return (
-    <section className="relative w-full pt-8 pb-20 lg:pt-12 lg:pb-32 overflow-hidden bg-[var(--background)]">
+    <section className="relative w-full pt-28 pb-20 lg:pt-36 lg:pb-32 overflow-hidden bg-[var(--background)]">
       {/* Absolute massive pastel blobs */}
       <div className="absolute top-[-10%] right-[-5%] w-[800px] h-[800px] bg-[var(--brand-mint)] opacity-70 organic-blob z-0 mix-blend-multiply"></div>
       <div className="absolute top-[20%] left-[-10%] w-[600px] h-[600px] bg-[var(--brand-peach)] opacity-70 organic-blob-2 z-0 mix-blend-multiply"></div>
       <div className="absolute bottom-[-20%] right-[20%] w-[700px] h-[700px] bg-[var(--brand-yellow)] opacity-50 organic-blob z-0 mix-blend-multiply"></div>
-
-      {/* Navigation Header */}
-      <div className="max-w-7xl mx-auto px-6 relative z-20 flex justify-between items-center mb-16 lg:mb-24">
-        <div className="flex items-center gap-3">
-          <div className="p-1.5 bg-white/50 backdrop-blur-md rounded-2xl shadow-sm">
-            <img src="/logo-dark.png" alt="Rewind Logo" className="w-10 h-10 object-contain rounded-[10px]" />
-          </div>
-          <span className="font-extrabold text-[var(--foreground)] text-2xl tracking-tight">Rewind</span>
-        </div>
-
-        <nav className="hidden md:flex items-center gap-1">
-          <a href="#gallery" className="px-4 py-2 rounded-full text-[var(--foreground)] opacity-60 hover:opacity-100 font-semibold text-sm transition-opacity">Screenshots</a>
-          <a href="#features" className="px-4 py-2 rounded-full text-[var(--foreground)] opacity-60 hover:opacity-100 font-semibold text-sm transition-opacity">Features</a>
-          <a href="#testimonials" className="px-4 py-2 rounded-full text-[var(--foreground)] opacity-60 hover:opacity-100 font-semibold text-sm transition-opacity">Reviews</a>
-          <a href="#faq" className="px-4 py-2 rounded-full text-[var(--foreground)] opacity-60 hover:opacity-100 font-semibold text-sm transition-opacity">FAQ</a>
-        </nav>
-
-        <a href="#download" className="bg-[var(--brand-peach)] text-[var(--foreground)] font-bold px-6 py-2 rounded-full shadow-sm hover:-translate-y-1 transition-transform text-sm">
-          Get Started
-        </a>
-      </div>
 
       <div className="max-w-7xl mx-auto px-6 relative z-10 flex flex-col lg:flex-row items-center gap-16">
 
