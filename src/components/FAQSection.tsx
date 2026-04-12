@@ -14,7 +14,15 @@ const faqs = [
   },
   {
     question: "How does the Live Voice pet talking actually work?",
-    answer: "Using advanced real-time voice technology, you can speak directly into your phone and receive a thoughtful, low-latency audio response from your companion. It's a natural way to talk through your day."
+    answer: "Using advanced real-time voice technology, you can speak directly into your phone and receive a thoughtful, low-latency audio response from your companion. It's a natural, judgment-free space to talk through your day."
+  },
+  {
+    question: "What types of journal entries can I create?",
+    answer: "Rewind supports text entries, voice notes, and photo attachments — so you can capture your moments in whichever format feels most natural to you."
+  },
+  {
+    question: "What is the Care Corner?",
+    answer: "The Care Corner is a dedicated wellness space inside Rewind featuring structured routines, breathing exercises, mindfulness prompts, and daily challenges designed to help you slow down and recharge."
   }
 ];
 
@@ -22,9 +30,9 @@ export default function FAQSection() {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
   return (
-    <section className="py-32 bg-[var(--background)]">
+    <section id="faq" className="py-32 bg-[var(--background)]">
       <div className="max-w-3xl mx-auto px-6">
-        
+
         <div className="text-center mb-16 relative">
           <h2 className="text-4xl md:text-5xl font-extrabold text-[var(--foreground)] tracking-tight">Frequently Asked Questions</h2>
           <div className="absolute top-[-50%] left-[20%] w-32 h-32 bg-[var(--brand-mint)] opacity-60 organic-blob -z-10"></div>
@@ -34,11 +42,11 @@ export default function FAQSection() {
           {faqs.map((faq, idx) => {
             const isOpen = openIndex === idx;
             return (
-              <div 
-                key={idx} 
+              <div
+                key={idx}
                 className={`bg-white/40 backdrop-blur-md rounded-3xl overflow-hidden transition-all duration-300 ${isOpen ? 'shadow-[0_10px_30px_-10px_rgba(34,60,51,0.08)] border border-white/80' : 'border border-[var(--border-color)] hover:border-white/80'}`}
               >
-                <button 
+                <button
                   onClick={() => setOpenIndex(isOpen ? null : idx)}
                   className="w-full text-left px-8 py-6 flex justify-between items-center focus:outline-none"
                 >
@@ -49,7 +57,7 @@ export default function FAQSection() {
                 </button>
                 <AnimatePresence>
                   {isOpen && (
-                    <motion.div 
+                    <motion.div
                       initial={{ height: 0, opacity: 0 }}
                       animate={{ height: "auto", opacity: 1 }}
                       exit={{ height: 0, opacity: 0 }}

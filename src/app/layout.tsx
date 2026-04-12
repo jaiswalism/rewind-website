@@ -11,6 +11,10 @@ const jakarta = Plus_Jakarta_Sans({
 export const metadata: Metadata = {
   title: "Rewind - Revisit your digital past",
   description: "A beautiful virtual companion and journaling tool for your daily wellness.",
+  icons: {
+    icon: "/logo-dark.ico",
+    apple: "/logo-dark.ico",
+  },
 };
 
 export default function RootLayout({
@@ -20,7 +24,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${jakarta.variable} antialiased scroll-smooth`}>
-      <body className="min-h-full flex flex-col selection:bg-[#3B38FF] selection:text-white">
+      <body className="min-h-full flex flex-col overflow-x-hidden selection:bg-[#3B38FF] selection:text-white">
         {children}
       </body>
     </html>

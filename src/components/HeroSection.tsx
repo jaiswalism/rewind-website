@@ -18,10 +18,21 @@ export default function HeroSection() {
           </div>
           <span className="font-extrabold text-[var(--foreground)] text-2xl tracking-tight">Rewind</span>
         </div>
+
+        <nav className="hidden md:flex items-center gap-1">
+          <a href="#gallery" className="px-4 py-2 rounded-full text-[var(--foreground)] opacity-60 hover:opacity-100 font-semibold text-sm transition-opacity">Screenshots</a>
+          <a href="#features" className="px-4 py-2 rounded-full text-[var(--foreground)] opacity-60 hover:opacity-100 font-semibold text-sm transition-opacity">Features</a>
+          <a href="#testimonials" className="px-4 py-2 rounded-full text-[var(--foreground)] opacity-60 hover:opacity-100 font-semibold text-sm transition-opacity">Reviews</a>
+          <a href="#faq" className="px-4 py-2 rounded-full text-[var(--foreground)] opacity-60 hover:opacity-100 font-semibold text-sm transition-opacity">FAQ</a>
+        </nav>
+
+        <a href="#download" className="bg-[var(--brand-peach)] text-[var(--foreground)] font-bold px-6 py-2 rounded-full shadow-sm hover:-translate-y-1 transition-transform text-sm">
+          Get Started
+        </a>
       </div>
-      
+
       <div className="max-w-7xl mx-auto px-6 relative z-10 flex flex-col lg:flex-row items-center gap-16">
-        
+
         {/* Left: Text Content */}
         <div className="flex-1 text-center lg:text-left pt-10">
           <motion.div
@@ -32,17 +43,17 @@ export default function HeroSection() {
           >
             v2.0 Now Available
           </motion.div>
-          
-          <motion.h1 
+
+          <motion.h1
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.1, ease: "easeOut" }}
             className="text-6xl lg:text-8xl font-extrabold tracking-[-0.04em] text-[var(--foreground)] leading-[1.0] mb-8"
           >
-            Reflect, grow, <br className="hidden lg:block"/> and remember.
+            Reflect, grow, <br className="hidden lg:block" /> and remember.
           </motion.h1>
-          
-          <motion.p 
+
+          <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
@@ -50,8 +61,8 @@ export default function HeroSection() {
           >
             A secure digital journal and guided care routine, featuring your very own virtual evolving companion.
           </motion.p>
-          
-          <motion.div 
+
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.3 }}
@@ -64,7 +75,7 @@ export default function HeroSection() {
         </div>
 
         {/* Right: massive placeholder for hero mockup */}
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.3, ease: "easeOut" }}
@@ -72,16 +83,18 @@ export default function HeroSection() {
         >
           {/* This is the placeholder where the user will drop their hero-mockup.png */}
           <div className="w-full aspect-[4/5] bg-white rounded-[4rem] shadow-[0_40px_80px_-20px_rgba(34,60,51,0.15)] border-[12px] border-white/50 backdrop-blur-xl overflow-hidden relative flex flex-col items-center justify-center text-center p-8 active:scale-[0.98] transition-transform duration-500 z-10">
-            <div className="iphone-notch"></div>
-            
-            <div className="w-20 h-20 rounded-full bg-[var(--brand-mint)] flex items-center justify-center mb-6">
+            {/* <div className="iphone-notch"></div> */}
+
+            {/* <div className="w-20 h-20 rounded-full bg-[var(--brand-mint)] flex items-center justify-center mb-6">
               <svg className="w-10 h-10 text-[var(--foreground)]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 4v16m8-8H4"></path></svg>
             </div>
             <p className="font-bold text-[var(--foreground)] text-xl">Drop your master mockup here</p>
-            <p className="text-[var(--foreground)] opacity-50 text-sm mt-3 font-mono bg-[var(--surface-gray)] px-4 py-2 rounded-xl">/public/hero-mockup.png</p>
+            <p className="text-[var(--foreground)] opacity-50 text-sm mt-3 font-mono bg-[var(--surface-gray)] px-4 py-2 rounded-xl">/public/hero-mockup.jpg</p> */}
+
+            <img src="./hero-mockup.jpg" alt="Hero Mockup" className="absolute inset-0 w-full h-full object-cover z-0" />
           </div>
         </motion.div>
-        
+
       </div>
     </section>
   );

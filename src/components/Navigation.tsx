@@ -12,7 +12,15 @@ export default function Navigation() {
           </div>
           <span className="font-extrabold text-[var(--foreground)] text-xl tracking-tight">Rewind</span>
         </Link>
-        <Link href="/#download" className="bg-[var(--brand-mint)] text-[var(--foreground)] font-bold px-6 py-2 rounded-full shadow-sm hover:-translate-y-1 transition-transform">
+
+        <nav className="hidden md:flex items-center gap-1">
+          <Link href="#features" className="px-4 py-2 rounded-full text-[var(--foreground)] opacity-70 hover:opacity-100 font-semibold text-sm transition-opacity">Features</Link>
+          <Link href="#gallery" className="px-4 py-2 rounded-full text-[var(--foreground)] opacity-70 hover:opacity-100 font-semibold text-sm transition-opacity">Screenshots</Link>
+          <Link href="#testimonials" className="px-4 py-2 rounded-full text-[var(--foreground)] opacity-70 hover:opacity-100 font-semibold text-sm transition-opacity">Reviews</Link>
+          <Link href="#faq" className="px-4 py-2 rounded-full text-[var(--foreground)] opacity-70 hover:opacity-100 font-semibold text-sm transition-opacity">FAQ</Link>
+        </nav>
+
+        <Link href="#download" className="bg-[var(--brand-mint)] text-[var(--foreground)] font-bold px-6 py-2 rounded-full shadow-sm hover:-translate-y-1 transition-transform">
           Get Started
         </Link>
       </div>
