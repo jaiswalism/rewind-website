@@ -25,7 +25,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${jakarta.variable} antialiased scroll-smooth`}>
-      <body className="min-h-full flex flex-col overflow-x-hidden selection:bg-[#3B38FF] selection:text-white">
+      <body className="min-h-full flex flex-col overflow-x-clip max-w-full selection:bg-[#3B38FF] selection:text-white">
         <ScrollToHash />
         {children}
       </body>

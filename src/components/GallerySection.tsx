@@ -76,10 +76,10 @@ export default function GallerySection() {
   return (
     <div id="gallery">
       {/* ── MOBILE: simple horizontal swipe strip ── */}
-      <section className="md:hidden py-16 bg-[var(--surface-gray)] overflow-hidden relative">
-        <div className="absolute top-1/2 left-[20%] w-[600px] h-[600px] bg-white opacity-50 organic-blob -translate-y-1/2 mix-blend-overlay pointer-events-none"></div>
+      <section className="md:hidden py-16 w-full bg-[var(--surface-gray)] overflow-hidden relative isolate">
+        <div className="absolute top-1/2 left-1/2 w-[80vw] h-[80vw] max-w-[400px] max-h-[400px] bg-white opacity-40 organic-blob -translate-x-1/2 -translate-y-1/2 pointer-events-none"></div>
         <SectionHeader />
-        <div className="flex overflow-x-auto gap-4 px-6 pb-8 snap-x snap-mandatory select-none" style={{ WebkitOverflowScrolling: "touch" } as React.CSSProperties}>
+        <div className="flex overflow-x-auto no-sb gap-4 px-6 pb-8 snap-x snap-mandatory select-none" style={{ WebkitOverflowScrolling: "touch" } as React.CSSProperties}>
           <style dangerouslySetInnerHTML={{ __html: `.no-sb::-webkit-scrollbar{display:none}.no-sb{-ms-overflow-style:none;scrollbar-width:none}` }} />
           <div className="w-4 shrink-0" />
           {placeholders.map((i, idx) => (
@@ -93,8 +93,8 @@ export default function GallerySection() {
 
       {/* ── DESKTOP: sticky scroll-driven parallax ── */}
       <div ref={outerRef} className="hidden md:block" style={{ position: 'relative', height: `${placeholders.length * 30 + 10}vh` }}>
-        <div className="sticky top-0 h-screen bg-[var(--surface-gray)] flex flex-col justify-center relative z-10">
-          <div className="absolute top-1/2 left-[20%] w-[1000px] h-[1000px] bg-white opacity-50 organic-blob -translate-y-1/2 mix-blend-overlay pointer-events-none"></div>
+        <div className="sticky top-0 h-screen w-full bg-[var(--surface-gray)] flex flex-col justify-center relative z-10 isolate">
+          <div className="absolute top-1/2 left-[20%] w-[1000px] h-[1000px] bg-white opacity-40 organic-blob -translate-y-1/2 pointer-events-none"></div>
           <SectionHeader />
           <div className="overflow-hidden">
             <motion.div
