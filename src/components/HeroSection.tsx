@@ -20,7 +20,7 @@ export default function HeroSection() {
             transition={{ duration: 0.8, ease: "easeOut" }}
             className="inline-block px-5 py-2 rounded-full bg-[var(--brand-teal)] text-[var(--foreground)] font-bold text-sm shadow-sm mb-6"
           >
-            v2.0 Now Available
+            v1.0 Now Available
           </motion.div>
 
           <motion.h1
