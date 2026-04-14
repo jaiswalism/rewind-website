@@ -24,7 +24,7 @@ export default function TermsOfService() {
             <h2 className="text-2xl font-bold mt-12 mb-4">1. General App Usage</h2>
             <ul className="list-disc ml-6 mb-4 space-y-2">
               <li>Rewind is intended for personal, non-commercial use to assist with reflection, daily routines, and mental wellness.</li>
-              <li>You may not reverse-engineer, disrupt, or exploit the Live Voice proxy service or Supabase backend.</li>
+              <li>You may not reverse-engineer, disrupt, or exploit the Live Voice proxy service or our backend infrastructure.</li>
             </ul>
             
             <h2 className="text-2xl font-bold mt-8 mb-4">2. Ownership & Privacy</h2>
@@ -37,7 +37,7 @@ export default function TermsOfService() {
             <ul className="list-disc ml-6 mb-4 space-y-2">
               <li><strong>No Objectionable Content:</strong> You may not post hate speech, harassment, explicit imagery, threats, or illegal content.</li>
               <li><strong>Reporting & Blocking:</strong> Rewind provides built-in tools to flag inappropriate posts and block abusive users.</li>
-              <li><strong>Moderation:</strong> We reserve the right to actively remove offensive content and permanently terminate accounts that violate these safety standards without prior notice.</li>
+              <li><strong>Moderation:</strong> We reserve the right to actively remove offensive content and permanently terminate accounts that violate these safety standards without prior notice. We review reports within 24 hours and take action including removal and banning.</li>
             </ul>
             
             <h2 className="text-2xl font-bold mt-8 mb-4">4. Disclaimers</h2>
