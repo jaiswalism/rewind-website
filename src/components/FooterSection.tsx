@@ -15,7 +15,7 @@ export default function FooterSection() {
             <p className="text-2xl text-[var(--foreground)] opacity-70 font-medium mb-10 max-w-xl mx-auto">
               Join thousands of users improving their mental wellness completely free.
             </p>
-            <a href="#download" className="btn-primary inline-block px-10 py-5 text-lg font-bold">
+            <a href="https://apps.apple.com/us/app/rewind-moments/id6761736241" target="_blank" rel="noopener noreferrer" className="btn-primary inline-block px-10 py-5 text-lg font-bold">
               Download Rewind Today
             </a>
           </div>

@@ -47,7 +47,7 @@ export default function HeroSection() {
             transition={{ duration: 0.6, delay: 0.3 }}
             className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4"
           >
-            <a href="#download" className="btn-primary w-full sm:w-auto px-8 py-4 text-lg">
+            <a href="https://apps.apple.com/us/app/rewind-moments/id6761736241" target="_blank" rel="noopener noreferrer" className="btn-primary w-full sm:w-auto px-8 py-4 text-lg">
               Download on the App Store
             </a>
           </motion.div>

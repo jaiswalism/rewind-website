@@ -55,9 +55,9 @@ export default function Navigation() {
           </div>
         </nav>
 
-        <button onClick={() => scrollTo("download")} className="bg-[var(--brand-peach)] text-[var(--foreground)] font-bold px-6 py-2 rounded-full shadow-sm hover:-translate-y-1 transition-transform text-sm">
+        <a href="https://apps.apple.com/us/app/rewind-moments/id6761736241" target="_blank" rel="noopener noreferrer" className="bg-[var(--brand-peach)] text-[var(--foreground)] font-bold px-6 py-2 rounded-full shadow-sm hover:-translate-y-1 transition-transform text-sm inline-block">
           Get Started
-        </button>
+        </a>
       </div>
     </div>
   );

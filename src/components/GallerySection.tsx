@@ -50,7 +50,7 @@ export default function GallerySection() {
   useEffect(() => {
     const orig = console.warn.bind(console);
     console.warn = (...args: unknown[]) => {
-      if (typeof args[0] === 'string' && args[0].includes('non-static position')) return;
+      if (typeof args[0] === 'string' && args[0].toLowerCase().includes('non-static position')) return;
       orig(...args);
     };
     return () => { console.warn = orig; };
@@ -92,7 +92,7 @@ export default function GallerySection() {
       </section>
 
       {/* ── DESKTOP: sticky scroll-driven parallax ── */}
-      <div ref={outerRef} className="hidden md:block" style={{ position: 'relative', height: `${placeholders.length * 30 + 10}vh` }}>
+      <div ref={outerRef} className="hidden md:block relative" style={{ height: `${placeholders.length * 30 + 10}vh` }}>
         <div className="sticky top-0 h-screen w-full bg-[var(--surface-gray)] flex flex-col justify-center relative z-10 isolate">
           <div className="absolute top-1/2 left-[20%] w-[1000px] h-[1000px] bg-white opacity-40 organic-blob -translate-y-1/2 pointer-events-none"></div>
           <SectionHeader />

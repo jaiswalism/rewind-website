@@ -24,7 +24,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${jakarta.variable} antialiased scroll-smooth`}>
+    <html lang="en" className={`${jakarta.variable} antialiased scroll-smooth`} data-scroll-behavior="smooth">
       <body className="min-h-full flex flex-col overflow-x-clip max-w-full selection:bg-[#3B38FF] selection:text-white">
         <ScrollToHash />
         {children}
